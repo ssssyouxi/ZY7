@@ -1,0 +1,395 @@
+$blue: #2e63bf
+@mixin title
+    font-size: 36px
+    color: $blue
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    text-align: center
+@mixin num($value: left,$t: 70)
+    @for $l from 1 through 4
+        .step-#{$l}
+            padding-#{$value}: #{$t}px
+            background: url("../img/#{$l}.jpg") no-repeat $value center
+@mixin title2 
+    font-size: 20px
+    color: $blue
+@mixin top-title
+    .title
+            border-left: 3px solid $blue
+            padding-left: 12px
+            padding-top: 2px
+            padding-bottom: 3px
+            background-color: #fff
+            margin-top: 40px
+            p
+                color: #333
+                &:last-child
+                    font-size: 30px
+                    font-weight: bold
+                    margin: 0
+            p.s
+                font-size: 18px
+                margin-bottom: 9px
+            span 
+                color: $blue
+#index 
+    article
+        margin-bottom: 72px
+    .ind_sec1
+        h4 
+            @include title
+            background: url("../img/ind_title1.png") no-repeat center 2px
+            margin-top: 22px
+            margin-bottom: 14px
+    .ind_sec2
+        h4 
+            @include title
+            background: url("../img/ind_title2.png") no-repeat center
+            margin-top: 37px
+            margin-bottom: 14px
+        p.l 
+            background-color: $blue
+            color: #fff
+            padding: 15px
+            margin-bottom: 0
+        p.step_t
+            margin: 0
+            color: $blue
+            font-size: 16px
+        p.step_t,p.step_c
+            line-height: 29px
+    .ind_sec3
+        background: url("../img/bg.jpg") repeat-y center
+        padding-top: 1px
+        padding-bottom: 40px
+        margin-bottom: 43px
+        h4 
+            @include title
+            background: url("../img/ind_title3.png") no-repeat center
+            margin-top: 37px
+            margin-bottom: 14px
+            color: #fff
+        ul 
+            padding-top: 55px
+        .bd
+            position: relative
+            padding-top: 30px
+            padding-bottom: 43px
+            min-height: 327px
+            img 
+                margin: 0 auto
+            p.bd_t
+                font-size: 18px
+                color: #fff
+                position: absolute
+                top: -13px
+                width: 100%
+                text-align: center
+            
+            p.more
+                position: absolute
+                width: 100%
+                text-align: center
+                bottom: -25px
+                span 
+                    display: inline-block
+                    height: 23px
+                    width: 88px
+                    border: 1px solid #fff
+                    border-radius: 12px
+                    background-color: $blue
+                    color: #fff
+                    line-height: 20px
+            p.bd_t:before,p.bd_t:after
+                width: 30px
+            p.more:before,p.more:after
+                width: 70px
+    .ind_sec4
+        h4
+            @include title
+            background: url("../img/ind_title4.png") no-repeat center
+            margin-bottom: 25px
+        .intro
+            background-color: #f1f1f1
+            padding: 25px
+            color: #333
+            min-height: 270px
+            .int_tit
+                font-size: 24px
+            &:hover
+                color: $blue
+            .int_con
+                margin: 0
+                line-height: 30px
+                color: #333
+                span 
+                    font-weight: bold
+                    color: $blue
+#product 
+    article
+        margin-bottom: 72px
+    .pl_sec1
+        @include top-title
+    .pl_sec2
+        li
+            text-align:  center
+            margin-bottom: 20px
+            a
+                &:hover 
+                    color: $blue
+                p 
+                    margin-top: 14px
+                    font-size: 16px
+                img
+                    margin: 0 auto
+    .pl_sec3
+        .title 
+            font-size: 24px
+            color: $blue
+        li 
+            margin-bottom: 40px
+            .date
+                padding: 3px 9px 
+                display: inline-block
+                margin-bottom: 8px
+            .intro
+                font-size: 16px
+                line-height: 25px
+                color: #333 !important
+                margin-bottom: 0
+
+        li:hover 
+            .date 
+                background-color: $blue 
+                color: #fff
+    .pl_sec4
+        .title 
+            font-size: 24px
+            color: $blue
+    .pa.title
+        @include title2
+    .pa_sec1
+        @include top-title
+    .pa_sec2
+        margin-top: 40px
+        img 
+            margin: 0 auto
+        .title
+            font-size: 24px
+            color: #333 
+            margin-top: 67px
+            margin-bottom: 25px
+        .title-sm
+            font-weight: bold
+            color: $blue
+            margin-bottom: 22px
+        button 
+            background-color: $blue
+            color: #fff 
+            width: 100%
+            border: none
+            border-radius: 15px
+            height: 30px
+            font-size: 18px
+            margin-bottom: 15px
+    .pa_sec3
+        .title
+            margin-top: 80px
+    
+    .pa_sec4
+        .title 
+            margin-top: 30px
+        li 
+            line-height: 30px
+    .pa_sec5 
+        .title
+            margin-top: 40px
+    .pa_sec6
+        margin-top: 30px
+        .title
+            margin-bottom: 30px
+        td 
+            vertical-align: middle
+        tr 
+            p   
+                margin-bottom: 0
+            &:first-child
+                background-color: $blue
+                color: #fff
+    .pa_sec7 
+        .title
+            margin-top: 53px
+        li
+            text-align:  center
+            margin-bottom: 20px
+            a
+                &:hover 
+                    color: $blue
+                p 
+                    margin-top: 14px
+                    font-size: 16px
+                img
+                    margin: 0 auto
+#news 
+    .nl_sec1
+        @include top-title
+    .nl_sec2
+        margin-top: 43px
+        margin-bottom: 77px
+        ul.news 
+            li 
+                margin-bottom: 40px
+                * 
+                    color: #333
+                .date 
+                    display: inline-block
+                    background-color: #f1f1f1
+                    padding: 3px 41px
+                    margin-bottom: 25px
+                .title 
+                    font-size: 18px 
+                    line-height: 25px
+                .intro
+                    line-height: 25px
+                &:first-child
+                    .date
+                        background-color: $blue
+                        color: #fff
+                        margin-top: 20px
+                    .intro
+                        color: #666
+                        margin-bottom: 27px
+                    .more
+                        display: inline-block
+                        border-bottom: 2px solid $blue
+                &:last-child
+                    margin-bottom: 30px
+                &:hover
+                    .date
+                        background-color: $blue
+                        color: #fff
+        ul.page
+            li
+                padding: 6px 11px
+                background-color: #f1f1f1
+                margin-right: 10px
+                float: left
+                color: #333
+                &:hover,&.active
+                    background-color: $blue
+                    color: #fff
+            
+    .na_sec1
+        @include top-title
+    .na_sec2
+        margin-bottom: 58px
+        *
+            color: #333
+        .title
+            font-size: 24px
+            margin-top: 60px
+            margin-bottom: 30px
+        .content 
+            p
+                line-height: 25px
+                margin-bottom: 30px
+            img 
+                margin: 0 auto 30px
+        .page 
+            margin-top: 34px
+            a
+                color: #666
+@media(min-width: 1200px)
+    #index 
+        .ind_sec2
+            p.l
+                padding: 52px 29px
+                min-height: 254px
+        .ind_sec3 
+            .bd:hover
+                border-left: 1px solid #c6d4ed
+                border-right: 1px solid #c6d4ed
+                p.more
+                    span 
+                        background-color: #fff 
+                        color: $blue
+                p:before,p:after
+                    content: ''                 
+                    position: absolute         
+                    background: #494949  
+                    height: 1px
+                    top: 13px
+                    background-color: #c6d4ed
+                p:before
+                    left: 0
+                p:after
+                    right: 0
+        .ind_sec4
+            .jtb
+                background: url("../img/yjt.jpg") no-repeat right bottom
+    .pl_sec1,.pa_sec1,.nl_sec1,.na_sec1
+            background: url("../img/bg1.jpg") no-repeat left 0
+@media(min-width: 1000px) and (max-width: 1199px)
+    #index 
+        .ind_sec2
+            p.l
+                padding: 9px 35px !important
+                min-height: 211px
+            .xm8 img 
+                max-width: 100%
+        .ind_sec4
+            .intro
+                padding: 8px
+                color: #333
+                min-height: 223px
+                .int_tit
+                    font-size: 22px
+                .int_con
+                    line-height: 28px
+    #product 
+        .pl_sec1 li a p 
+            font-size: 15px
+        .pa_sec2 .title
+            margin-top: 40px
+    #news 
+        .nl_sec2
+            ul.news    
+                li:first-child
+                    p 
+                        margin: 0 !important
+@media(min-width: 1000px)
+    #index 
+        .ind_sec2 
+            @include num(left)        
+@media(max-width: 999px)
+    #index 
+        .ind_sec2 
+            @include num(top,50)
+            .step_t
+                text-align: center
+        .ind_sec3
+            li 
+                margin-bottom: 50px
+        .ind_sec4
+            img 
+                width: 100%
+    #product 
+        .pa_sec6
+            .table-responsive
+                width: 100%
+                overflow-x: scroll
+                overflow-y: hidden
+                -webkit-overflow-scrolling: touch
+                -ms-overflow-style: -ms-autohiding-scrollbar
+@media(max-width: 759px)
+    #product 
+        .pl_sec2 
+            img 
+                margin: 0 auto
+@media(max-width: 449px)
+    #product 
+        .pl_sec2 
+            img 
+                width: 100%
+@media(max-width: 399px)
+    h4 
+        background-image: none !important
