@@ -348,6 +348,10 @@
   margin: 0 auto;
 }
 
+#news article {
+  margin-bottom: 72px;
+}
+
 #news .nl_sec1 .title {
   border-left: 3px solid #2e63bf;
   padding-left: 12px;
